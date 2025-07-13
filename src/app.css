@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation-duration: 100ms;
+    }
+
+    button:active:hover:not(:disabled),
+    button:active:focus:not(:disabled) {
+        @apply transition-transform duration-75 ease-in-out;
+        transform: scale(0.97);
+    }
+}
